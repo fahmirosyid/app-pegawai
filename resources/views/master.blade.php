@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>@yield('title', 'App Pegawai')</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>@yield('page-title', 'Aplikasi Pegawai')</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="{{ url('/employees') }}">Employee</a></li>
+                <li><a href="{{ url('/departments') }}">Department</a></li>
+                <li><a href="{{ url('/attendance') }}">Attendance</a></li>
+                <li><a href="{{ url('/salaries') }}">Salaries</a></li>
+                <li><a href="{{ url('/settings') }}">Settings</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        @yield('content')
+    </main>
+
+    <footer>
+        <p>&copy; {{ date('Y') }} App Pegawai</p>
+    </footer>
+</body>
+
+</html>
